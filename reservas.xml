@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE reservas SYSTEM "reservas.dtd">
+<reservas>
+    <reserva fecha="Thu Jan 14 17:38:28 CET 2021" noches="1" numero="1" tipo="INDIVIDUAL">
+        <cliente nombre="pepe"/>
+    </reserva>
+    <reserva fecha="Thu Jan 14 17:38:28 CET 2021" noches="1" numero="2" tipo="INDIVIDUAL">
+        <cliente nombre="luis"/>
+    </reserva>
+</reservas>

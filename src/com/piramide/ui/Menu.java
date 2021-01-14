@@ -1,7 +1,5 @@
 package com.piramide.ui;
 
-import com.piramide.dao.ControlReservas;
-import com.piramide.dao.ControlReservasFile;
 import com.piramide.dao.DAOFactory;
 import com.piramide.entities.Cliente;
 import com.piramide.entities.Reserva;
@@ -42,7 +40,7 @@ public class Menu {
         Reserva reserva = new Reserva(numeroReserva, TipoHabitacion.INDIVIDUAL,1,cliente);
         //guardo la reserva
         //controlReservas.inserta(reserva);
-        DAOFactory.getInstance().getControlReservas().inserta(reserva);
+        DAOFactory.getInstance().getDAOReservas().inserta(reserva);
     }
 
     private static void muestraBusquedaReserva(){
@@ -53,7 +51,7 @@ public class Menu {
         //creo un objeto que busca
         //busco en la persistencia
         //Reserva reserva = controlReservas.busca(numReserva);
-        Reserva reserva = DAOFactory.getInstance().getControlReservas().busca(numReserva);
+        Reserva reserva = DAOFactory.getInstance().getDAOReservas().busca(numReserva);
         System.out.println(reserva);
     }
 }

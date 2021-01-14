@@ -22,12 +22,27 @@ public class Reserva implements Serializable {
         return this.numero;
     }
 
+    public TipoHabitacion getTipo() {
+        return tipo;
+    }
+
+    public Date getFechaEntrada() {
+        return fechaEntrada;
+    }
+
+    public Integer getNoches() {
+        return noches;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
     @Override
     public String toString() {
         return "Reserva{" +
                 "numero=" + numero +
                 ", tipo=" + tipo +
-                ", fechaEntrada=" + fechaEntrada +
                 ", noches=" + noches +
                 ", cliente=" + cliente +
                 '}';

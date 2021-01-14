@@ -1,0 +1,10 @@
+<!ELEMENT reservas (reserva*)>
+<!ELEMENT reserva (cliente)>
+<!ATTLIST reserva
+    fecha CDATA #REQUIRED
+    noches CDATA #REQUIRED
+    numero CDATA #REQUIRED
+    tipo CDATA #REQUIRED
+>
+<!ELEMENT cliente EMPTY>
+<!ATTLIST cliente nombre CDATA #REQUIRED>

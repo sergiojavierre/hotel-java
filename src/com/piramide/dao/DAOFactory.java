@@ -1,9 +1,13 @@
 package com.piramide.dao;
 
+import com.piramide.dao.reservas.DAOReservas;
+import com.piramide.dao.reservas.DAOReservasFile;
+import com.piramide.dao.reservas.DAOReservasXML;
+
 public class DAOFactory {
 
     private static DAOFactory daoFactory;
-    private ControlReservas controlReservas;
+    private DAOReservas DAOReservas;
     private DAOFactory(){}
 
     public static DAOFactory getInstance() {
@@ -13,11 +17,11 @@ public class DAOFactory {
         return daoFactory;
     }
 
-    public ControlReservas getControlReservas(){
-        if(controlReservas == null){
-            controlReservas = new ControlReservasFile();
+    public DAOReservas getDAOReservas(){
+        if(DAOReservas == null){
+            DAOReservas = new DAOReservasXML();
         }
-        return controlReservas;
+        return DAOReservas;
     }
 
 }

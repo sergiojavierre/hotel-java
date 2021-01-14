@@ -12,6 +12,10 @@ public class Cliente implements Serializable {
         this.email = email;
     }
 
+    public String getNombre() {
+        return nombre;
+    }
+
     @Override
     public String toString() {
         return "Cliente{" +

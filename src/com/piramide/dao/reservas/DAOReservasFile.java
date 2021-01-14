@@ -1,4 +1,4 @@
-package com.piramide.dao;
+package com.piramide.dao.reservas;
 
 import com.piramide.entities.Reserva;
 
@@ -6,13 +6,13 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ControlReservasFile implements ControlReservas, Serializable {
+public class DAOReservasFile implements DAOReservas, Serializable {
 
     List<Reserva> reservas;
 
     private final String fileReservas = "reservas";
 
-    public ControlReservasFile() {
+    public DAOReservasFile() {
         reservas = new ArrayList<>();
     }
 
@@ -37,7 +37,7 @@ public class ControlReservasFile implements ControlReservas, Serializable {
         try {
             FileInputStream fis = new FileInputStream(fileReservas);
             ObjectInputStream ois = new ObjectInputStream(fis);
-            ControlReservasFile control = (ControlReservasFile) ois.readObject();
+            DAOReservasFile control = (DAOReservasFile) ois.readObject();
             this.reservas = control.reservas;
             ois.close();
             fis.close();
